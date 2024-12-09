@@ -40,7 +40,6 @@ def estimate_loss():
     model.train()
     return {k: v.mean() for k, v in losses.items()}
 
-# Training Loop
 for iter in range(max_iters):
     if iter % eval_interval == 0:
         losses = estimate_loss()
