@@ -12,3 +12,7 @@ def load_data(file_path):
 
     data = torch.tensor(encode(text), dtype=torch.long)
     return data, decode, len(chars)
+    
+def split_data(data, train_ratio=0.9):
+    n = int(train_ratio * len(data))
+    return data[:n], data[n:]
