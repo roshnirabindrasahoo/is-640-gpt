@@ -2,7 +2,6 @@ import torch
 from model import BigramLanguageModel
 from data import load_data, split_data, get_batch
 
-# Hyperparameters
 batch_size = 16
 block_size = 8
 max_iters = 100
@@ -21,7 +20,6 @@ torch.manual_seed(1337)
 data, decode, vocab_size = load_data('input.txt')
 train_data, val_data = split_data(data)
 
-# Initialize Model
 model = BigramLanguageModel(vocab_size, n_embd, block_size, n_head, n_layer, dropout)
 model = model.to(device)
 
