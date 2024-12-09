@@ -16,7 +16,6 @@ dropout = 0.2
 
 torch.manual_seed(1337)
 
-# Load and prepare data
 data, decode, vocab_size = load_data('input.txt')
 train_data, val_data = split_data(data)
 
