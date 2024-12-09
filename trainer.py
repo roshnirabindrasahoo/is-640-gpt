@@ -39,8 +39,6 @@ class Trainer:
             self.optimizer.zero_grad(set_to_none=True)
             loss.backward()
             self.optimizer.step()
-
-        # Post training
-        # final loss
+            
         final_losses = self.estimate_loss()
         print(f"Final train loss {final_losses['train']:.4f}, val loss {final_losses['val']:.4f}")
