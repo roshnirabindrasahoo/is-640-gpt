@@ -35,8 +35,6 @@ class Trainer:
             #sample
             xb, yb = self.data.get_batch('train', self.batch_size, self.train_data, self.val_data)
 
-            # Loss evaluation
-            # use of optimizer
             _, loss = self.model(xb, yb)
             self.optimizer.zero_grad(set_to_none=True)
             loss.backward()
