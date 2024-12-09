@@ -1,6 +1,5 @@
 import torch
 
-#defining class Trainer
 class Trainer:
     def __init__(self, model, data_obj, max_iters=5000, eval_interval=500, eval_iters=200, batch_size=64, learning_rate=3e-4):
         self.model = model
