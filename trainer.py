@@ -51,6 +51,5 @@ for iter in range(max_iters):
     loss.backward()
     optimizer.step()
 
-# Generate Text
 context = torch.zeros((1, 1), dtype=torch.long, device=device)
 print(decode(model.generate(context, max_new_tokens=500, block_size=block_size)[0].tolist()))
